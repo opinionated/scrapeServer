@@ -23,6 +23,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	log.Init(infoFile, errFile, warnFile)
 
 	defer infoFile.Close()
 	defer errFile.Close()
