@@ -8,8 +8,24 @@ import (
 )
 
 func main() {
-	// make logs write to standard out
-	log.InitStd()
+	infoFile, err := os.OpenFile("scrapeInfoLog.txt", os.O_RDWR|os.O_CREATE, 0666)
+	if err != nil {
+		panic(err)
+	}
+
+	errFile, err := os.OpenFile("scrapeErrorLog.txt", os.O_RDWR|os.O_CREATE, 0666)
+	if err != nil {
+		panic(err)
+	}
+
+	warnFile, err := os.OpenFile("scrapeWarnLog.txt", os.O_RDWR|os.O_CREATE, 0666)
+	if err != nil {
+		panic(err)
+	}
+
+	defer infoFile.Close()
+	defer errFile.Close()
+	defer warnFile.Close()
 
 	// create the new server
 	s := server.NewScrapeServer()
