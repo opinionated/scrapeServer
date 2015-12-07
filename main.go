@@ -21,7 +21,7 @@ func main() {
 	log.Info("started jefe")
 
 	// make server scrape WSJ
-	rss := server.CreateSchedulableRSS(&scraper.WSJRSS{}, 10, j)
+	rss := server.CreateSchedulableRSS(&scraper.NYTRSS{}, 10, j)
 	j.AddSchedulable(rss)
 
 	log.Info("going to start server")
