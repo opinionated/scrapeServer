@@ -5,6 +5,7 @@ import (
 	"github.com/opinionated/scraper-core/scraper"
 	"github.com/opinionated/utils/log"
 	"net/http"
+	"os"
 )
 
 func main() {
