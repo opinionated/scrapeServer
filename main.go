@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/opinionated/scraper-core/net/server"
+	"github.com/opinionated/scrapeServer/server"
 	"github.com/opinionated/scraper-core/scraper"
 	"github.com/opinionated/utils/log"
 	"net/http"
