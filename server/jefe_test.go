@@ -1,4 +1,4 @@
-package netScraper_test
+package server_test
 
 import (
 	"flag"
